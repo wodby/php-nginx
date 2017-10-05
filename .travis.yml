@@ -9,10 +9,10 @@ env:
   global:
     - DOCKER_COMPOSE_VERSION=1.10.0
     - DOCKER_VERSION=17.06.2
-    - LATEST_NGINX_VER=1.13
+    - LATEST_NGINX_VER=1.13.5
   matrix:
-    - LINE=1.x TAG=1.13 NGINX_VER=1.13.5
-    - LINE=1.x TAG=1.12 NGINX_VER=1.12.1
+    - TAG=1.13 NGINX_VER=1.13.5
+    - TAG=1.12 NGINX_VER=1.12.1
 
 before_install:
   - sudo apt-get update
@@ -25,7 +25,6 @@ install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-  - cd ./$LINE
   - make && make test
 
 after_success: |
