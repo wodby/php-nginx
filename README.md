@@ -12,9 +12,7 @@
 * [Travis CI builds](https://travis-ci.org/wodby/php-nginx) 
 * [Docker Hub](https://hub.docker.com/r/wodby/php-nginx)
 
-## Versions
-
-| Image Tag (Dockerfile)                                            | Nginx   |
+| Image tag (Dockerfile)                                            | Nginx   |
 | ----------------------------------------------------------------- | ------- |
 | [1.13](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.5  |
 | [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.12.1  |
