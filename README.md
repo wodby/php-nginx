@@ -7,14 +7,17 @@
 
 ## Docker Images
 
-Images are based on [wodby/nginx](https://github.com/wodby/nginx), built via [Travis CI](https://travis-ci.org/wodby/php-nginx) and published on [Docker Hub](https://hub.docker.com/r/wodby/php-nginx). 
+* All images are based on Alpine Linux
+* Base image: [wodby/nginx](https://github.com/wodby/nginx)
+* [Travis CI builds](https://travis-ci.org/wodby/php-nginx) 
+* [Docker Hub](https://hub.docker.com/r/wodby/php-nginx)
 
 ## Versions
 
-| Image Tag (Dockerfile)                                                  | Nginx   | Alpine |
-| ----------------------------------------------------------------------- | ------- | ------ |
-| [1.13](https://github.com/wodby/php-nginx/tree/master/4/1.x/Dockerfile) | 1.13.5  | 3.6    |
-| [1.12](https://github.com/wodby/php-nginx/tree/master/4/1.x/Dockerfile) | 1.12/1  | 3.6    |
+| Image Tag (Dockerfile)                                            | Nginx   |
+| ----------------------------------------------------------------- | ------- |
+| [1.13](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.5  |
+| [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.12.1  |
 
 ## Environment Variables
 

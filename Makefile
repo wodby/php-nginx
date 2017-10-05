@@ -4,7 +4,7 @@ NGINX_VER ?= 1.13.5
 TAG ?= 1.13
 
 REPO = wodby/php-nginx
-NAME = php-nginx-$(TAG)
+NAME = php-nginx-$(NGINX_VER)
 
 .PHONY: build test push shell run start stop logs clean release
 
