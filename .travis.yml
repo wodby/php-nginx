@@ -9,7 +9,7 @@ env:
   global:
     - DOCKER_COMPOSE_VERSION=1.10.0
     - DOCKER_VERSION=17.06.2
-    - LATEST_NGINX_VER=1.13.5
+    - LATEST_TAG=1.13
   matrix:
     - TAG=1.13 NGINX_VER=1.13.5
     - TAG=1.12 NGINX_VER=1.12.1
@@ -33,10 +33,10 @@ after_success: |
     make release
 
     if [ -n "$TRAVIS_TAG" ]; then
-      make TAG="$TAG-$TRAVIS_TAG" release
+      make release TAG="$TAG-$TRAVIS_TAG"
     fi
 
-    if [ "$NGINX_VER" == "$LATEST_NGINX_VER" ]; then
+    if [ "$TAG" == "$LATEST_TAG" ]; then
       make release TAG=latest
     fi
   fi

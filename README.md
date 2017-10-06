@@ -14,10 +14,10 @@
 
 For better reliability we release images with stability tags (`wodby/php-nginx:1.13-X.X.X`) which correspond to git tags. We **strongly recommend** using images only with stability tags. Below listed basic tags:
 
-| Image tag (Dockerfile)                                            | Nginx   |
-| ----------------------------------------------------------------- | ------- |
-| [1.13](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.5  |
-| [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.12.1  |
+| Image tag (Dockerfile)                                                     | Nginx   |
+| -------------------------------------------------------------------------- | ------- |
+| [1.13 (latest)](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.5  |
+| [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile)          | 1.12.1  |
 
 ## Environment Variables
 
