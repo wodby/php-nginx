@@ -3,15 +3,20 @@
 NGINX_VER ?= 1.13.5
 TAG ?= 1.13
 
+FROM_TAG = $(NGINX_VER)
 REPO = wodby/php-nginx
 NAME = php-nginx-$(NGINX_VER)
+
+ifneq ($(FROM_STABILITY_TAG),)
+    FROM_TAG := $(FROM_TAG)-$(FROM_STABILITY_TAG)
+endif
 
 .PHONY: build test push shell run start stop logs clean release
 
 default: build
 
 build:
-	docker build -t $(REPO):$(TAG) --build-arg NGINX_VER=$(NGINX_VER) ./
+	docker build -t $(REPO):$(TAG) --build-arg FROM_TAG=$(FROM_TAG) ./
 
 test:
 	IMAGE=$(REPO):$(TAG) ./test.sh

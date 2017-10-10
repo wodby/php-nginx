@@ -1,6 +1,6 @@
-ARG NGINX_VER
+ARG FROM_TAG
 
-FROM wodby/nginx:${NGINX_VER}
+FROM wodby/nginx:${FROM_TAG}
 
 ENV WODBY_DIR_FILES="/mnt/files" \
     NGINX_USER="www-data"
