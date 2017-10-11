@@ -1,6 +1,6 @@
 -include env_make
 
-NGINX_VER ?= 1.13.5
+NGINX_VER ?= 1.13.6
 TAG ?= 1.13
 
 FROM_TAG = $(NGINX_VER)

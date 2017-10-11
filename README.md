@@ -16,7 +16,7 @@ For better reliability we release images with stability tags (`wodby/php-nginx:1
 
 | Image tag (Dockerfile)                                                     | Nginx   |
 | -------------------------------------------------------------------------- | ------- |
-| [1.13 (latest)](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.5  |
+| [1.13 (latest)](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.6  |
 | [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile)          | 1.12.1  |
 
 ## Environment Variables
