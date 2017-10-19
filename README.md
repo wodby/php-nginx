@@ -23,12 +23,12 @@ For better reliability we release images with stability tags (`wodby/php-nginx:1
 
 See more at [wodby/nginx](https://github.com/wodby/nginx)
 
-| Variable                       | Default Value | Description |
-| ------------------------------ | ------------- | ----------- |
-| NGINX_BACKEND_HOST             | php           |             |
-| NGINX_SERVER_NAME              | default       |             |
-| NGINX_SERVER_ROOT              | /var/www/html |             |
-| NGINX_FASTCGI_BUFFERS          | 16 32k        |             |
-| NGINX_FASTCGI_BUFFER_SIZE      | 32k           |             |
-| NGINX_FASTCGI_INTERCEPT_ERRORS | on            |             |
-| NGINX_FASTCGI_READ_TIMEOUT     | 900           |             |
+| Variable                       | Default Value  | Description |
+| ------------------------------ | -------------- | ----------- |
+| NGINX_BACKEND_HOST             | php            |             |
+| NGINX_SERVER_NAME              | default        |             |
+| NGINX_SERVER_ROOT              | /var/www/html/ |             |
+| NGINX_FASTCGI_BUFFERS          | 16 32k         |             |
+| NGINX_FASTCGI_BUFFER_SIZE      | 32k            |             |
+| NGINX_FASTCGI_INTERCEPT_ERRORS | on             |             |
+| NGINX_FASTCGI_READ_TIMEOUT     | 900            |             |

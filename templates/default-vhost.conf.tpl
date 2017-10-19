@@ -1,5 +1,5 @@
 upstream php {
-    server {{ getenv "NGINX_BACKEND_HOST" }}:9000;
+    server {{ getenv "NGINX_BACKEND_HOST" "php" }}:9000;
 }
 
 map $http_x_forwarded_proto $fastcgi_https {
@@ -15,9 +15,8 @@ server {
     root {{ getenv "NGINX_SERVER_ROOT" "/var/www/html/" }};
     index index.php;
 
+    include healthz.conf;
     include fastcgi.conf;
-
-    add_header Cache-Control "store, must-revalidate, post-check=0, pre-check=0";
 
     location ~* ^/.well-known/ {
         allow all;
@@ -52,6 +51,4 @@ server {
         fastcgi_pass php;
         track_uploads uploads 60s;
     }
-
-    include healthz.conf;
 }
