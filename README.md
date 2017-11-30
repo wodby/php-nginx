@@ -12,12 +12,12 @@
 * [Travis CI builds](https://travis-ci.org/wodby/php-nginx) 
 * [Docker Hub](https://hub.docker.com/r/wodby/php-nginx)
 
-For better reliability we release images with stability tags (`wodby/php-nginx:1.13-X.X.X`) which correspond to git tags. We **strongly recommend** using images only with stability tags. Below listed basic tags:
+Supported tags and respective `Dockerfile` links:
 
-| Image tag (Dockerfile)                                                     | Nginx   |
-| -------------------------------------------------------------------------- | ------- |
-| [1.13 (latest)](https://github.com/wodby/php-nginx/tree/master/Dockerfile) | 1.13.6  |
-| [1.12](https://github.com/wodby/php-nginx/tree/master/Dockerfile)          | 1.12.1  |
+* `1.13`, `latest` [_(Dockerfile)_](https://github.com/wodby/php-nginx/tree/master/Dockerfile)
+* `1.12` [_(Dockerfile)_](https://github.com/wodby/php-nginx/tree/master/Dockerfile)
+
+For better reliability we additionally release images with stability tags (`wodby/php-nginx:1.13-X.X.X`) which correspond to [git tags](https://github.com/wodby/php-nginx/release). We **strongly recommend** using images only with stability tags. 
 
 ## Environment Variables
 

@@ -1,7 +1,7 @@
 -include env_make
 
-NGINX_VER ?= 1.13.6
-TAG ?= 1.13
+NGINX_VER ?= 1.13
+TAG ?= $(NGINX_VER)
 
 FROM_TAG = $(NGINX_VER)
 REPO = wodby/php-nginx
@@ -9,6 +9,12 @@ NAME = php-nginx-$(NGINX_VER)
 
 ifneq ($(FROM_STABILITY_TAG),)
     FROM_TAG := $(FROM_TAG)-$(FROM_STABILITY_TAG)
+endif
+
+ifneq ($(STABILITY_TAG),)
+ifneq ($(TAG),latest)
+    override TAG := $(TAG)-$(STABILITY_TAG)
+endif
 endif
 
 .PHONY: build test push shell run start stop logs clean release
