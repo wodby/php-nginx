@@ -13,7 +13,7 @@ server {
     listen       80;
 
     root {{ getenv "NGINX_SERVER_ROOT" "/var/www/html/" }};
-    index index.php;
+    index {{ getenv "NGINX_INDEX_FILE" "index.php" }};
 
     include healthz.conf;
     include fastcgi.conf;
@@ -39,7 +39,7 @@ server {
     }
 
     location / {
-        try_files $uri $uri/ /index.php?$args;
+        try_files $uri $uri/ /{{ getenv "NGINX_INDEX_FILE" "index.php" }}?$args;
     }
 
     location ~ [^/]\.php(/|$) {
