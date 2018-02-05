@@ -32,6 +32,7 @@ Supported tags and respective `Dockerfile` links:
 | `NGINX_FASTCGI_BUFFER_SIZE`      | `32k`            |             |
 | `NGINX_FASTCGI_INTERCEPT_ERRORS` | `on`             |             |
 | `NGINX_FASTCGI_READ_TIMEOUT`     | `900`            |             |
+| `NGINX_INDEX_FILE`               | `index.php`      |             |
 
 See [wodby/nginx](https://github.com/wodby/nginx) for all variables.
 
