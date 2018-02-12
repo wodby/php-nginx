@@ -38,16 +38,16 @@ server {
         deny all;
     }
 
+    if (!-d $request_filename) {
+        rewrite ^/(.+)/$ /$1 permanent;
+    }
+
     location / {
-        try_files $uri $uri/ /{{ getenv "NGINX_INDEX_FILE" "index.php" }}?$args;
+        try_files $uri /{{ getenv "NGINX_INDEX_FILE" "index.php" }}?$args;
     }
 
     location ~ [^/]\.php(/|$) {
         fastcgi_split_path_info ^(.+?\.php)(/.*)$;
-        if (!-f $document_root$fastcgi_script_name) {
-            return 404;
-        }
-
         fastcgi_pass php;
         track_uploads uploads 60s;
     }
