@@ -15,4 +15,4 @@ echo -n "Checking php endpoint... "
 docker-compose exec nginx curl "localhost" | grep -q "Hello World!"
 echo "OK"
 
-docker-compose -f test/docker-compose.yml down
+docker-compose down
