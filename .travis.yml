@@ -5,10 +5,10 @@ services:
 
 env:
   global:
-    - LATEST_TAG=1.13
+    - LATEST_TAG=1.14
   matrix:
-    - TAG=1.13 NGINX_VER=1.13 EXTRA_TAG=1
-    - TAG=1.12 NGINX_VER=1.12
+    - TAG=1.14 NGINX_VER=1.14 EXTRA_TAG=1
+    - TAG=1.13 NGINX_VER=1.13
 
 script:
   - make && make test
