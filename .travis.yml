@@ -6,7 +6,7 @@ services:
 env:
   global:
     - LATEST_TAG=1.14
-    - BASE_IMAGE_STABILITY_TAG=4.0.3
+    - BASE_IMAGE_STABILITY_TAG=4.1.1
   matrix:
     - TAG=1.14 NGINX_VER=1.14 EXTRA_TAG=1
     - TAG=1.13 NGINX_VER=1.13
