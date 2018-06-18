@@ -1,6 +1,6 @@
 -include env_make
 
-NGINX_VER ?= 1.14
+NGINX_VER ?= 1.15
 TAG ?= $(NGINX_VER)
 
 BASE_IMAGE_TAG = $(NGINX_VER)
