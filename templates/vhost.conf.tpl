@@ -15,18 +15,9 @@ server {
     root {{ getenv "NGINX_SERVER_ROOT" "/var/www/html/" }};
     index {{ getenv "NGINX_INDEX_FILE" "index.php" }};
 
-    include healthz.conf;
     include fastcgi.conf;
-
-    {{ pagespeed := (getenv "NGINX_PAGESPEED") }}
-    {{ if (eq $pagespeed "on") }}
-    location ~ "\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+" {
-        add_header "" "";
-    }
-
-    location ~ "^/pagespeed_static/" { }
-    location ~ "^/ngx_pagespeed_beacon$" { }
-    {{ end }}
+    include healthz.conf;
+    include pagespeed.conf;
 
     location ~* ^/.well-known/ {
         allow all;
