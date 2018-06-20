@@ -15,8 +15,9 @@ server {
     root {{ getenv "NGINX_SERVER_ROOT" "/var/www/html/" }};
     index {{ getenv "NGINX_INDEX_FILE" "index.php" }};
 
-    include healthz.conf;
     include fastcgi.conf;
+    include healthz.conf;
+    include pagespeed.conf;
 
     location ~* ^/.well-known/ {
         allow all;
